@@ -1,0 +1,89 @@
+/* Add your custom styles here */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.tracking {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.trackingColumn {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.trackingColumn p{
+    font-size: 22px;
+    font-weight: bold;
+}
+#globalCases, #globalActive{
+    color: orange;
+}
+#globalRecoveries{ 
+    color: green;
+}
+#globalDeaths{
+    color: red;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.apis a {
+    color: #ccc;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
