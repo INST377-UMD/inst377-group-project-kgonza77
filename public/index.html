@@ -16,16 +16,15 @@
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#Tracking">Tracking</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
         </ul>
     </nav>
 
     <!-- Tracking Section -->
-    <h2>Tracking COVID-19</h2>
-    
     <!-- This section will display the global covid information -->
+    <h2 id="title">Global Tracking Information: COVID-19</h2>
     <section class="tracking">
         <div class="trackingColumn">
             <h3>Global Cases:</h3>
@@ -47,38 +46,41 @@
 
     <!-- Global Map Section -->
     <!-- The map API should be linked to the Covid API to display locations-->
+    <h2 id="title">Global COVID-19 Map</h2>
+
     <section id="globalMap">
-        <h2>Global COVID-19 Map</h2>
         <div id="map"></div>
     </section>
 
-    <!-- Search Bar -->
-    <!-- This section will allow the user to search for a specific location -->
-    <section id="searchBar">
-        <h2>Search COVID-19 Data by:</h2><br>
-        <div class="filter-category">
-            <button id="countryBtn" onclick="searchData('country')">Country</button>
-            <button id="stateBtn" onclick="searchData('state')">State</button><br><br>
-        </div><br>
-    </section>
+    <!-- Search Result Tables -->
+    <h1 id="title">Search Results</h1>
+    <section class="results" id="searchResults">
+        <!-- Country Results Table -->
+        <section class="country-results">
+            <h2 id="title">Country Results</h2>
+            <div class="result-table-section">
+                <input type="text" id="search-by-country-input" placeholder="Search by Country">
+                <div class="table-container" id="countryTable">
+                    <!-- Country Table will be displayed here -->
+                </div>
+            </div>
+        </section>
 
-    <!-- Search Results Table -->
-    <section id="searchResults">
-        <h2>Search Results</h2>
-        <input type="text" id="searchInput" placeholder="Search"><br><br>
-        <div class="table-info">
-            <div id="countryTable" class="table-container">
-                <!-- Country Table will be displayed here -->
+        <!-- State Results Table -->
+        <section class="state-results">
+            <h2 id="title">State Results</h2>
+            <div class="result-table-section">
+                <input type="text" id="search-by-state-input" placeholder="Search by State">
+                <div class="table-container" id="stateTable">
+                    <!-- State Table will be displayed here -->
+                </div>
             </div>
-            <div id="stateTable" class="table-container" style="display: none;">
-                <!-- State Table will be displayed here (hidden by default) -->
-            </div>
-        </div>
+        </section>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p class="authors">Authors: Your Names</p>
+        <p class="authors">Authors: Kevin Gonzalez, [place-holder] , [place-holder] </p>
         <p>Public Health Dashboard</p>
         <p class="apis">APIs Used: 
             <a href="https://disease.sh">Disease.sh API</a>,
