@@ -56,6 +56,21 @@ section {
     padding: 20px;
     border: 1px solid #ddd;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+#errorBox{
+    background-color: rgb(209, 81, 81);
+    color: white;
+    border: 3px solid black;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+}
 
 footer {
     background-color: #333;
@@ -116,6 +131,7 @@ footer {
 .results {
     display: flex;
     flex-direction: row;
+    height: 800px;
     
 }
 
@@ -123,8 +139,21 @@ footer {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
+    height: 400px;
+    overflow-x: scroll;
 }
 
+.result-table-section table {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.search-bar-result {
+    height: 70px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
 .state-results, .country-results {
     flex-grow: 1;
     background-color: #f0f0f0;

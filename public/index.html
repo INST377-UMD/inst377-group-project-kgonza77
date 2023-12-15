@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="styling.css" /> <!-- Add a separate CSS file for styling -->
     <title>COVID-19 Dashboard</title>
+    <script src="dashboard.js" defer></script>
 </head>
 <body>
     <!-- Main Header -->
@@ -22,7 +23,7 @@
         </ul>
     </nav>
 
-    <!-- Tracking Section -->
+    <!-- Global tracking Section -->
     <!-- This section will display the global covid information -->
     <h2 id="title">Global Tracking Information: COVID-19</h2>
     <section class="tracking">
@@ -58,9 +59,18 @@
         <!-- Country Results Table -->
         <section class="country-results">
             <h2 id="title">Country Results</h2>
-            <div class="result-table-section">
+            <div class="search-bar-result">
                 Search: <input type="text" id="search-by-country-input" placeholder="Search by Country">
-                <div><!-- result of inputted country --></div>
+                <input type="submit" value="Submit">
+                <div id="searched-country">
+                    <!-- result of inputted country -->
+                </div>
+                <p>Here is how the country is in comparation with the rest of the world:</p>
+                <div id="searched-vs-global">
+                    <!-- result of inputted country vs global -->
+                </div>
+            </div>
+            <div class="result-table-section">
                 <div class="table-container" id="countryTable">
                     <!-- Country Table will be displayed here -->
                 </div>
@@ -70,9 +80,16 @@
         <!-- State Results Table -->
         <section class="state-results">
             <h2 id="title">State Results</h2>
-            <div class="result-table-section">
+            <div class="search-bar-result">
                 Search: <input type="text" id="search-by-state-input" placeholder="Search by State">
+                <input type="submit" value="Submit">
                 <div><!-- result of inputted state --></div>
+                <p>Here is how the state is in comparation with the rest of the USA:</p>
+                <div id="state-vs-global">
+                    <!-- result of inputted state vs USA -->
+                </div>  
+            </div>
+            <div class="result-table-section">
                 <div class="table-container" id="stateTable">
                     <!-- State Table will be displayed here -->
                 </div>
@@ -93,6 +110,5 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="dashboard.js"></script>
 </body>
 </html>

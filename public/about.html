@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="lab7-App-JS.js" defer></script>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+                margin-top: 20px;
+                background-color: white;
+            }
+            #errorBox{
+                background-color: rgb(209, 81, 81);
+                color: white;
+                border: 3px solid black;
+                font-size: 20px;
+                margin: 10px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>This is Lab 7</h1>
+        <form onsubmit="addCustomer(); return false;">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter your First Name" required>
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter your Last Name" required>
+            <br>
+            <label for="state">State:</label>
+            <input type="text" id="state" placeholder="Enter your state" maxlength="2" required>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <hr>
+        </form>
+    </body>
+
+</html>

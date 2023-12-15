@@ -1,7 +1,14 @@
 // Function to fetch global COVID-19 data
 async function fetchGlobalData() {
     try {
+        // Fetch data from the external API
         const response = await fetch('https://disease.sh/v3/covid-19/all');
+
+        if (!response.ok) {
+            throw new Error(`Error fetching global data: ${response.statusText}`);
+        }
+
+        // Parse the JSON response
         const data = await response.json();
 
         // Update HTML with global COVID-19 data
@@ -10,6 +17,7 @@ async function fetchGlobalData() {
         document.getElementById('globalRecoveries').textContent = data.recovered.toLocaleString();
         document.getElementById('globalActive').textContent = data.active.toLocaleString();
     } catch (error) {
+        console.error(error.message);
         console.error('Error fetching global data:', error);
     }
 }
@@ -38,11 +46,15 @@ async function fetchCovidData(criteria, value) {
                 apiUrl = 'https://disease.sh/v3/covid-19/states';
                 break;
             default:
-                console.error('Invalid search criteria');
-                return;
+                throw new Error('Invalid search criteria'); // Improved error handling
         }
 
         const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+            throw new Error(`Error fetching ${criteria} data: ${response.statusText}`);
+        }
+
         const data = await response.json();
 
         // Update HTML with search results
