@@ -131,8 +131,29 @@ footer {
 .results {
     display: flex;
     flex-direction: row;
-    height: 800px;
+    height: 900px;
     
+}
+.state-results, .country-results {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.search-bar-result {
+    /*top, right, bottom, and left margins*/
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.searched-vs-global,.state-vs-global{
+    height: 70px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
 }
 
 .result-table-section {
@@ -145,22 +166,7 @@ footer {
 
 .result-table-section table {
     width: 100%;
-    white-space: nowrap;
-}
-
-.search-bar-result {
-    height: 70px;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-.state-results, .country-results {
-    flex-grow: 1;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
+    white-space: wrap;
 }
 
 #search-by-country-input,

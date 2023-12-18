@@ -55,19 +55,20 @@
 
     <!-- Search Result Tables -->
     <h1 id="title">Search Results</h1>
-    <section class="results" id="searchResults">
+    <section class="results">
+        
         <!-- Country Results Table -->
         <section class="country-results">
             <h2 id="title">Country Results</h2>
+
             <div class="search-bar-result">
+                <p>Compare any country's COVID stats to the global average</p>
                 Search: <input type="text" id="search-by-country-input" placeholder="Search by Country">
-                <input type="submit" value="Submit">
-                <div id="searched-country">
+                <div id="input-country">
                     <!-- result of inputted country -->
                 </div>
-                <p>Here is how the country is in comparation with the rest of the world:</p>
                 <div id="searched-vs-global">
-                    <!-- result of inputted country vs global -->
+                    <!-- comparation, country vs global -->
                 </div>
             </div>
             <div class="result-table-section">
@@ -80,12 +81,14 @@
         <!-- State Results Table -->
         <section class="state-results">
             <h2 id="title">State Results</h2>
+
             <div class="search-bar-result">
+                <p>Compare any state's COVID stats to the USA's average</p>
                 Search: <input type="text" id="search-by-state-input" placeholder="Search by State">
-                <input type="submit" value="Submit">
-                <div><!-- result of inputted state --></div>
-                <p>Here is how the state is in comparation with the rest of the USA:</p>
-                <div id="state-vs-global">
+                <div id="input-state">
+                    <!-- result of inputted state -->
+                </div>
+                <div id="state-vs-USA">
                     <!-- result of inputted state vs USA -->
                 </div>  
             </div>
